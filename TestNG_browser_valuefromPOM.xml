@@ -1,0 +1,37 @@
+<suite name="TestNG - Suite" verbose="0" allow-return-values="true"
+	parallel="tests" thread-count="5">
+	<parameter name="param1" value="Parveen" />
+
+
+	
+
+	<!-- <test name="T2" preserve-order="true">
+		<parameter name="browser" value="iexplore" />
+		<classes>
+			<class name="p1.MatrimonyTest_refactored" />
+		</classes>
+	</test> -->
+
+<test name="T1" preserve-order="true">
+		
+		<classes>
+			<class name="p1.MatrimonyTest_refactored" />
+
+		</classes>
+	</test>
+
+	<test name="T3" preserve-order="true">
+		
+		<classes>
+			<class name="p1.MatrimonyTest_refactored" />
+		</classes>
+	</test>
+
+
+	<test name="T4" preserve-order="true">
+		
+		<classes>
+			<class name="p1.MatrimonyTest_refactored" />
+		</classes>
+	</test>
+</suite>

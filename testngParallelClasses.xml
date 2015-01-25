@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" name="Suite" parallel="classes">
+	<test name="Test">
+		<classes>
+			<class name="p1.localhost_driverclose" />
+			<class name="p1.localhost_driverclose_copy1" />
+			<class name="p1.localhost_driverclose_copy2" />
+			<class name="p1.localhost_driverclose_copy3" />
+			<class name="p1.localhost_driverclose_copy4" />
+			<class name="p1.localhost_driverclose_copy5" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

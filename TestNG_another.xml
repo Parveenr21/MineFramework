@@ -1,0 +1,33 @@
+<suite name="TestNG - Suite for tests without WebDriver" verbose="0"
+	allow-return-values="true" parallel="classes" thread-count="4">
+	<parameter name="param1" value="Parveen" />
+	<parameter name="x" value="BJP" />
+	<parameter name="y" value="NARENDRA" />
+	<parameter name="z" value="MODI" />
+
+
+	<test name="InsertionClasses testing" preserve-order="true">
+		<parameter name="browser" value="ff" />
+		<classes>
+			<class name="pack_testNG.Methodrun_testNG" />
+
+			<class name="pack_testNG.Methodrun_testNG2">
+
+				<!-- inserting method means only this test method will be considered 
+					all other test method will be ignored -->
+
+				<!-- <methods> <include name="met5" /> </methods> -->
+			</class>
+		</classes>
+	</test>
+
+	<test name="Get Classes testing" preserve-order="true">
+		<parameter name="browser" value="ff" />
+		<classes>
+			<class name="pack_testNG.Methodrun_testNG3" />
+		</classes>
+	</test>
+
+
+
+</suite>

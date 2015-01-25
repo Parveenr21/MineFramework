@@ -1,0 +1,22 @@
+<suite name="TestNG - Suite for WebDriver test" verbose="0"
+	allow-return-values="true" parallel="tests" thread-count="5">
+	>
+	<parameter name="param1" value="Parveen" />
+
+	<test name="FirefoxTests" preserve-order="true">
+		<parameter name="browser" value="ff" />
+
+		<classes>
+			<class name="p1.DoubleClick" />
+			<!-- <class name="p1.DoubleClick"></class> <class name="p1.MouseOver"></class> 
+				<class name="p1.MoveVerticalScrollBar"></class> -->
+		</classes>
+
+	</test>
+	<!-- <test name="ChromeTests" preserve-order="true"> <parameter name="browser" 
+		value="ff" /> <classes> <class name="p1.MatrimonyTest" /> </classes> </test> 
+		<test name="ChromeTests1" preserve-order="true"> <parameter name="browser" 
+		value="ff" /> <classes> <class name="p1.MatrimonyTest" /> </classes> </test> 
+		<test name="ChromeTests2" preserve-order="true"> <parameter name="browser" 
+		value="ff" /> <classes> <class name="p1.MatrimonyTest" /> </classes> </test> -->
+</suite>
