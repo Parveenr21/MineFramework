@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -16,11 +15,11 @@ public class FBfriendList {
 
 	JavascriptExecutor executor= (JavascriptExecutor) driver;  //hold the driver instance in java script executor
 
-	
+
 	/*
 	 * There is one more javascriptexecutor.. check the correctone should from selenium side.
 	 */
-	
+
 	@Test
 	public void getFrndList() throws InterruptedException
 	{
@@ -45,6 +44,7 @@ public class FBfriendList {
 
 		driver.manage().window().maximize(); 
 		
+
 
 		driver.findElement(By.xpath("//*[@id='fbTimelineHeadline']//a[contains(@href,'friends')]")).click();
 
@@ -78,10 +78,10 @@ public class FBfriendList {
 		}
 
 
-		
-	
-		
-		
+
+
+
+
 		System.out.println(driver.findElements(By.xpath("//*[@class='fsl fwb fcb']")).size());
 
 

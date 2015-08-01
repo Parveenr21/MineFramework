@@ -54,8 +54,8 @@ public class MatrimonyTest_refactored_SystemProperty {
 
 		else if (System.getProperty("browser").equalsIgnoreCase("ffremote")) {
 
-			//driver=getFirefoxDriverInstance();
-			driver=getFirefoxDriverlocal();
+			driver=getFirefoxDriverInstance();
+			//driver=getFirefoxDriverlocal();
 		}
 
 
