@@ -12,29 +12,33 @@ public class DBapi{
 	private static DBapi DBConInstance;
 	public  Connection con;
     private  final String Driver = "oracle.jdbc.driver.OracleDriver";
-    private  final String ConnectionString = "jdbc:oracle:thin:@hsotname:1521:SID";
-    private  final String user = "UserID";
-    private  final String pwd = "UserPAsswd";
+    private  String hostname;
+    private  String SID;
+    private   String ConnectionString = "jdbc:oracle:thin:@"+hostname+":1521:"+SID;
+    private   String username = "UserID";
+    private   String password = "UserPAsswd";
 
     
     /**
      * Making constructor private
      */
     
-    private DBapi(){
-    	
-    	
+    private DBapi(String hostname,String SID, String username, String password){
+    	this.hostname=hostname;
+    	this.SID=SID;
+    	this.username=username;
+    	this.password=password;
     }
     
     
     /**
      * create Database object
      */
-     public static DBapi Database() {
+     public static DBapi Database(String hostname,String SID, String username, String password) {
     
     	if(DBConInstance==null)
     	{
-    		DBConInstance = new DBapi();
+    		DBConInstance = new DBapi(hostname,SID,username,password);
     	}
     	return DBConInstance;
     }
@@ -51,7 +55,7 @@ public class DBapi{
         } catch (ClassNotFoundException ex) {
             System.out.println(ex.getMessage());
         }
-        con = DriverManager.getConnection(ConnectionString, user, pwd);
+        con = DriverManager.getConnection(ConnectionString, username, password);
         return con;
     }
 
