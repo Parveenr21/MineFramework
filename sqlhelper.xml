@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Favorite Things</comment>
+<entry key="SID">Antarctica</entry>
+<entry key="hostname">marmot</entry>
+<entry key="UserID">Nicole</entry>
+<entry key="Password">Nicole</entry>
+</properties>
