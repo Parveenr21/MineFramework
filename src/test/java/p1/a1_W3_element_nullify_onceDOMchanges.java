@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.*;
 import org.testng.annotations.*;
 
-public class W3_element_nullify_onceDOMchanges {
+public class a1_W3_element_nullify_onceDOMchanges {
 
 	WebDriver driver;
 	@BeforeMethod

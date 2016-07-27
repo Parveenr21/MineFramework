@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-public class Html5 {
+public class a9_Html5 {
 
 	WebDriver driver;
 	
@@ -13,6 +13,8 @@ public class Html5 {
 	public void test(){
 		
 		driver= new FirefoxDriver();
+		
+		//This page has HTML 5
 		
 		driver.get("http://lostworldsfairs.com/");
 		

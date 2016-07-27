@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-public class FBfriendList {
+public class a5_FBfriendList {
 
 
 	public WebDriver driver;
@@ -29,38 +29,46 @@ public class FBfriendList {
 
 		driver.get("https://www.facebook.com/");
 
-		driver.findElement(By.xpath("//*[@class='inputtext' and @type='text']")).sendKeys("p18101984@gmail.com");
-		driver.findElement(By.xpath("//*[@class='inputtext' and @type='password']")).sendKeys("stvcmnpcnmocratfoene");
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("p18101984@gmail.com");
+		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("stvcmnpcnmocratfoene");
 
 		driver.findElement(By.xpath("//*[@type='submit']")).click();;
 
 
 
-
-		driver.findElement(By.xpath("//*[@class='navItem firstItem tinyman litestandNavItem']/a/span")).click();
+//Logged in now.. clicking on loggedin User's profile or Timeline
+		driver.findElement(By.xpath("//a[contains(@data-gt,'timeline')]")).click();
 
 
 		Thread.sleep(2000);
 
+		
+		
+		
 		driver.manage().window().maximize(); 
 		
 
+//Clicking on the friends tab
+		driver.findElement(By.xpath("//a[@data-tab-key='friends']")).click();
 
-		driver.findElement(By.xpath("//*[@id='fbTimelineHeadline']//a[contains(@href,'friends')]")).click();
 
-
+		//Prepare Java scriot executor and cast driver instance to it
+		
 		executor= (JavascriptExecutor) driver;
 
 
 
 		while(true)
 		{
-			executor.executeScript("scroll(0,2500000)");
+			executor.executeScript("scroll(0,2500000)"); //pixel specification
 			Thread.sleep(2000);
 
 			try{
 
-				if(driver.findElement(By.xpath("//*[@id='timeline-medley']/div[2]/div[2]/div[1]/div/div/h3")).getText().contains("More About"))
+//				if(driver.findElement(By.xpath("//h3[contains(.,'More About')]")).getText().contains("More About"))
+	
+				if(driver.findElement(By.xpath("//h3[contains(.,'More About')]")).isDisplayed())
+
 				{
 					break;	
 				}
@@ -71,7 +79,9 @@ public class FBfriendList {
 			catch(Throwable t)
 			{
 
-
+				//Catch block.. beacuse ..when object will not be found.. catch block will keep on the iteration
+				
+System.out.println("inside CATCH block");
 			}
 
 
@@ -80,7 +90,11 @@ public class FBfriendList {
 
 
 
-
+//Finding all friends .. counts of the logged inuser
+		//Either try to check for a generic xxpath locator which will find for all user 
+		//OR
+		//INSPECT one ELEMENT and check for something generic and then create xpath on your own
+		
 
 		System.out.println(driver.findElements(By.xpath("//*[@class='fsl fwb fcb']")).size());
 
@@ -88,7 +102,7 @@ public class FBfriendList {
 
 		for(WebElement s: driver.findElements(By.xpath("//*[@class='fsl fwb fcb']")))
 		{
-			System.out.println(s.getText());
+			System.out.println(s.getText());  //Printing the name of Friends
 
 		}
 	}

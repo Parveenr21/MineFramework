@@ -106,6 +106,18 @@ public class MatrimonyTest_refactored {
 
 		
 		
+		/*
+		 * For mac os x
+		 * download the chrome driver and set the path of its downloaded location in the PATH variable and source the bash_prfile
+		 * also then specify the path using property else will get an error..
+		 * CHECK ..here I m also mentioning .. chromdriver.. not till its home only
+		 * 
+		 * do 
+		 * 
+		 * System.setProperty("webdriver.chrome.driver" ,  "/Users/parawat/Downloads/chromedriver");
+
+		 */
+		
 		return new ChromeDriver();
 		
 

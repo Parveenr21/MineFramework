@@ -9,6 +9,8 @@ import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
@@ -32,6 +34,26 @@ public class LoginPage_func1 {
 		//Initializing LoginPage class and passing webdriver instance to it ..this also insitialize proxy of webelements
 		LoginPage LP=	PageFactory.initElements(driverInstance, LoginPage.class);
 
+		//In Ajax Element locator factory.. timeout in seconds..
+		
+//		ElementLocatorFactory finder=new AjaxElementLocatorFactory(driverInstance, 100);
+//		PageFactory.initElements(finder, this);
+
+		
+//	    PageFactory.initElements(new AjaxElementLocatorFactory(driverInstance, 100), this);
+//	  //  or
+//	    PageFactory.initElements(new AjaxElementLocatorFactory(driverInstance, 100), LP);
+
+		
+		
+		
+	/*	The belw line of code will always be in Page class so that all findBy webelemts
+		will get checked at the timeof their use only with a timeout..very helpful 
+		for ajax.
+		
+		PageFactory.initElements(new AjaxElementLocatorFactory(driverInstance, 100), this);
+		
+		*/
 		
 		System.out.println(LP.getAllLinksCount());
 		

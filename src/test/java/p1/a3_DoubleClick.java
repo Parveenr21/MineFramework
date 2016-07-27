@@ -10,7 +10,7 @@ import org.testng.*;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-public class DoubleClick {
+public class a3_DoubleClick {
 
 	WebDriver driver;
 	
@@ -33,7 +33,8 @@ public class DoubleClick {
 	
 		Actions action = new Actions(driver);
 		
-		action.doubleClick(driver.findElement(By.xpath("//*[@id='gbqfba']"))).perform();
+		//Double click statement written there
+		//action.doubleClick(driver.findElement(By.xpath("//*[@id='gbqfba']"))).perform();
 		
 		
 		//WebElement a= driver.findElement(By.linkText("dd"));
