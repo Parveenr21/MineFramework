@@ -39,12 +39,16 @@ public class a2_CrossDomainPolicy {
 		
 		
 		
+		
+		
+		
 		//IMP!!!!!!!  The below command will not create a new profile but it will create an object of the current profile to 
 		//set the preferences so that we can run the test as per our need
 		
 		FirefoxProfile objectOfCurrentProfile = new FirefoxProfile();
 		objectOfCurrentProfile.setAcceptUntrustedCertificates(true);
 		driver=new FirefoxDriver(objectOfCurrentProfile);
+		
 		
 		
 		

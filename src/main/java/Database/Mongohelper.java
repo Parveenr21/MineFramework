@@ -1,10 +1,10 @@
 package Database;
 
-import com.mongodb.MongoClient;
+//import com.mongodb.MongoClient;
 
 public class Mongohelper {
 
-	
+	/*
 
 	MongoClient mongo = new MongoClient( "localhost" , 27017 );
 	MongoClient mongoClient = new MongoClient();
@@ -23,6 +23,6 @@ public class Mongohelper {
 	
 	DB db = mongo.getDB("testdb");
 	DBCollection table = db.getCollection("user");
-
+*/
 
 }

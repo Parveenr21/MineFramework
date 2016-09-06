@@ -10,10 +10,18 @@ import org.testng.*;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-public class Http2Https {
+public class b1_TypingAutoCompleteText {
 
 	WebDriver driver;
 	
+	//HERE we dont use driver.findElement.sendkeys
+	//Here we use action.sendkeys
+	//action.sendkeys(WebElement, TEXT).perform().
+	
+	//We need to perform send keys on a webElement while KEY board action does not get performed like that
+	//Here we go to webelement first and then we just PERFORM keyboard actions
+	
+	//action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.UP).sendKeys(Keys.RETURN).perform();
 	
 	@Test
 	public void test() throws InterruptedException
@@ -29,10 +37,10 @@ public class Http2Https {
 		
 		System.out.println(driver.getCurrentUrl());
 		
-		driver.findElement(By.xpath("//td//input[@name='userName']")).clear();
-		driver.findElement(By.xpath("//td//input[@name='userName']")).sendKeys("prawat6");
-		driver.findElement(By.xpath("//td//input[@name='password']")).clear();
-		driver.findElement(By.xpath("//td//input[@name='password']")).sendKeys("pcq997");	
+		driver.findElement(By.xpath("//*[@id='usernameId']")).clear();
+		driver.findElement(By.xpath("//*[@id='usernameId']")).sendKeys("prawat6");
+		driver.findElement(By.xpath("//*[@class='loginPassword']")).clear();
+		driver.findElement(By.xpath("//*[@class='loginPassword']")).sendKeys("pcq997");	
 	
 		driver.findElement(By.xpath("//td//input[@name='password']")).submit();
 		
@@ -49,6 +57,7 @@ public class Http2Https {
 		
 		
 		Actions action = new Actions(driver);
+		
 		
 		/*
 		 * 
@@ -88,6 +97,8 @@ public class Http2Https {
 		driver.findElement(By.xpath("//input[@id='stationFrom']")).clear();
 		action.sendKeys(driver.findElement(By.xpath("//input[@id='stationFrom']")), "DDN").perform();
 		action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.UP).sendKeys(Keys.RETURN).perform();
+		
+		
 		
 		
 		driver.findElement(By.xpath("//input[@id='stationTo']")).clear();

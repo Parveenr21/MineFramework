@@ -1,0 +1,16 @@
+<staff>
+	<Test.alpha>
+		<firstname>yong</firstname>
+		<lastname>mook kim</lastname>
+		<nickname>mkyong</nickname>
+		<salary>100000</salary>
+	</Test.alpha>>
+	<Test.beta>
+		<firstname>low</firstname>
+		<lastname>yin fong</lastname>
+		<nickname>fong fong</nickname>
+		<salary>200000</salary>
+	</Test.beta>>
+	<entry key="UserID">Nicole</entry>
+	<entry key="Password">Nicole</entry>
+</staff>

@@ -16,7 +16,7 @@ public class a9_Html5 {
 		
 		//This page has HTML 5
 		
-		driver.get("http://lostworldsfairs.com/");
+		driver.get("http://www.google.com/");
 		
 		
 		

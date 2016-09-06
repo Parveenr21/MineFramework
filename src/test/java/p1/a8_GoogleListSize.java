@@ -1,11 +1,19 @@
 package p1;
 
 import java.util.List;
+import java.util.logging.Level;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.logging.Logs;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
@@ -16,6 +24,28 @@ public class a8_GoogleListSize {
 	@Test
 	public void getSize() throws InterruptedException
 	{
+		
+		
+		/*LoggingPreferences logs = new LoggingPreferences();
+		logs.enable(LogType.BROWSER, Level.ALL);
+		logs.enable(LogType.CLIENT, Level.ALL);
+		logs.enable(LogType.DRIVER, Level.ALL);
+		logs.enable(LogType.PERFORMANCE, Level.ALL);
+		logs.enable(LogType.PROFILER, Level.ALL);
+		logs.enable(LogType.SERVER, Level.ALL);
+
+		DesiredCapabilities desiredCapabilities = DesiredCapabilities.firefox();
+		desiredCapabilities.setCapability(CapabilityType.LOGGING_PREFS, logs);
+
+		
+		Logs logs1 = driver.manage().logs();
+		LogEntries logEntries = logs1.get(LogType.DRIVER);
+
+		for (LogEntry logEntry : logEntries) {
+		    System.out.println(logEntry.getMessage());
+		}
+		
+		WebDriver driver = new FirefoxDriver(desiredCapabilities);*/
 		
 		driver=new FirefoxDriver();
 		

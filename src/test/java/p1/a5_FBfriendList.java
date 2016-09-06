@@ -13,7 +13,7 @@ public class a5_FBfriendList {
 
 	public WebDriver driver;
 
-	JavascriptExecutor executor= (JavascriptExecutor) driver;  //hold the driver instance in java script executor
+  public JavascriptExecutor executor;
 
 
 	/*
@@ -54,7 +54,7 @@ public class a5_FBfriendList {
 
 		//Prepare Java scriot executor and cast driver instance to it
 		
-		executor= (JavascriptExecutor) driver;
+		executor= (JavascriptExecutor) driver; //hold the driver instance in java script executor
 
 
 

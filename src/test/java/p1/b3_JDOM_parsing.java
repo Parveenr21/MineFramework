@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.bcel.classfile.Utility;
+import org.apache.commons.io.IOUtils;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
@@ -11,12 +13,46 @@ import org.jdom.input.SAXBuilder;
 
 import com.sun.jna.LastErrorException;
 
-public class JDOM_parsing {
+public class b3_JDOM_parsing {
 
 	public static void main(String[] args) {
-		 
+		
+		
+		/*
+		 * 
+		 * JDOM is not like SAX or DOM, which bundled in JDK. To use JDOM, you need to download the library manually.
+
+
+
+<dependency>
+	<groupId>jdom</groupId>
+	<artifactId>jdom</artifactId>
+	<version>1.1</version>
+    </dependency>
+    
+    
+		 *
+		 * 
+		 * 
+		 */
+		
+		
+		/*
+		 * DOM provides a way to represent that document for easy and efficient reading,
+		 *  manipulation, and writing. It has a straightforward API, is a lightweight and fast, 
+		 *  and is optimized for the Java programmer. It’s an alternative to DOM and SAX, although 
+		 *  it integrates well with both DOM and SAX.
+		 *  
+		 * 
+ */
+		
+		
+		
+		
+		
 		  SAXBuilder builder = new SAXBuilder();
-		  File xmlFile = new File("D:\\file.xml");
+		  File xmlFile = new File("file.xml");
+		  
 	 
 		  try {
 	 
@@ -47,5 +83,20 @@ public class JDOM_parsing {
 			System.out.println(jdomex.getMessage());
 		  }
 		}
+	
+	
+	/*public static String getFile(String fileName) {
+
+	      String result = "";
+	     try {
+
+	          result = IOUtils.toString(Utility.class.getClassLoader().getResourceAsStream(fileName));
+	} catch (IOException e) {
+	e.printStackTrace();
+	}
+
+	return result;
+
+	}*/
 	
 }

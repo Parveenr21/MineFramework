@@ -4,8 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.*;
 import org.testng.annotations.*;
 
@@ -15,7 +14,13 @@ public class a1_W3_element_nullify_onceDOMchanges {
 	@BeforeMethod
 	public void setup()
 	{
+DesiredCapabilities cap= DesiredCapabilities.firefox();
 		
+		cap.setCapability("marionette", true);	//RUN by keeping it true only
+		cap.setCapability("firefox_binary", "/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox-bin");
+
+		System.setProperty("webdriver.gecko.driver","/Users/parawat/Downloads/geckodriver");
+
 		driver=new FirefoxDriver();
 		
 		

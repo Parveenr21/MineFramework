@@ -26,6 +26,22 @@ public class MouseOver {
 	
 		Actions action = new Actions(driver);
 		
+
+		
+		/*
+		 * Use of KEYS up and down in ACTIONS classes.
+		 * 
+		 		here..the commands are built.. on by one
+		 * 
+		 * 
+		 *   
+		 * Actions action= new Actions(driver);
+		 *
+		 *action.keyDown(Keys.CONTROL).click(someElement).click(someOtherElement).keyUp(Keys.CONTROL);
+
+		 * 
+		 */
+		
 		
 		/*
 		 * 

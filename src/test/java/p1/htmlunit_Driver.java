@@ -27,6 +27,13 @@ public class htmlunit_Driver {
 	public void test1()
 	{
 		
+		//by Default java scripts are disabled in htmlunit instance
+		
+		//WebDriver driver= new HtmlUnitDriver();  //this will have java script disabled
+		
+		
+		//WebDriver driver= new HtmlUnitDriver(true); //set java script execution true
+		
 		
 		
 		DesiredCapabilities capability = DesiredCapabilities.htmlUnitWithJs();
