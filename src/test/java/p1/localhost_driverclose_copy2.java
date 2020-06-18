@@ -3,6 +3,7 @@ package p1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DriverCommand;
@@ -20,13 +21,16 @@ WebDriver driver;
 	{
 		System.out.println("Inside Test method");
 		FirefoxProfile profile = new FirefoxProfile();
-		
-		
-		driver=new FirefoxDriver(profile);
-		
-		
-		
-			
+
+
+		FirefoxOptions opt = new FirefoxOptions();
+		opt.setProfile(profile);
+		WebDriver driver = new FirefoxDriver(opt);
+
+
+
+
+
 		driver.get("http://localhost:8080/jquery/www.tutorialspoint.com/jquery/jquery-basics.html");
 		
 			

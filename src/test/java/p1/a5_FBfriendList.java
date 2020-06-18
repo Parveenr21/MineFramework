@@ -51,7 +51,6 @@ public class a5_FBfriendList {
 //Clicking on the friends tab
 		driver.findElement(By.xpath("//a[@data-tab-key='friends']")).click();
 
-
 		//Prepare Java scriot executor and cast driver instance to it
 		
 		executor= (JavascriptExecutor) driver; //hold the driver instance in java script executor

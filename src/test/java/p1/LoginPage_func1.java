@@ -1,21 +1,17 @@
 package p1;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import junit.framework.Assert;
-
-import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-
-import ActionUtil.Util;
 import site1.LoginPage;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.util.List;
 
 
 public class LoginPage_func1 {
@@ -25,14 +21,34 @@ public class LoginPage_func1 {
 	
 	@Test
 	public void testmethod1() throws MalformedURLException, IOException{
-		
+
+		List<String> vers=WebDriverManager.firefoxdriver().getVersions();
+
+
+		WebDriverManager.firefoxdriver().setup();
+
 		driverInstance=new FirefoxDriver();
+
+
 		
 		
-		
-		
-		//Initializing LoginPage class and passing webdriver instance to it ..this also insitialize proxy of webelements
+
+
+          /*
+
+          java.lang.NullPointerException  will come if we initialize this class like below
+          LoginPage LP= new LoginPage(driverInstance);
+
+          This way does notinitialize the webelements.. To initiazlise the webelements we need to use PageFactory.init elements
+
+         LoginPage LP=	PageFactory.initElements(driverInstance, LoginPage.class);
+         */
+
+
+
 		LoginPage LP=	PageFactory.initElements(driverInstance, LoginPage.class);
+
+
 
 		//In Ajax Element locator factory.. timeout in seconds..
 		
@@ -54,12 +70,13 @@ public class LoginPage_func1 {
 		PageFactory.initElements(new AjaxElementLocatorFactory(driverInstance, 100), this);
 		
 		*/
-		
+
+			LP.foo();
 		System.out.println(LP.getAllLinksCount());
 		
 		LP.getTextOrURLName();
 		LP.CheckALLURL();
-		
+
 		
 		
 		
@@ -70,8 +87,7 @@ public class LoginPage_func1 {
 			System.out.println(System.getProperty("buildDirectory"));
 				
 			Assert.assertEquals("PASS",true, true);
-		
-		
+
 	}
 	
 	@AfterMethod

@@ -5,8 +5,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.internal.Killable;
-import org.testng.*;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 

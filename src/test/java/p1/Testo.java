@@ -1,15 +1,11 @@
 package p1;
 
-import org.junit.AfterClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-
-import ActionUtil.Util;
 import site1.LoginPage;
 
 
@@ -21,9 +17,9 @@ public class Testo {
 	@Test
 	public void testmethod1() throws InterruptedException{
 		
-		//driverInstance=new FirefoxDriver();
+		driverInstance=new FirefoxDriver();
 		
-		driverInstance= new HtmlUnitDriver();
+		//driverInstance= new HtmlUnitDriver();
 		
 		//Initializing LoginPage class and passing webdriver instance to it ..this also insitialize proxy of webelements
 		LoginPage LP=	PageFactory.initElements(driverInstance, LoginPage.class);

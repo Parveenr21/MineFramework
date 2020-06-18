@@ -1,24 +1,15 @@
 package p1;
 
 
-import java.util.Iterator;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
-import com.gargoylesoftware.htmlunit.BrowserVersion;
-import com.gargoylesoftware.htmlunit.Page;
-import com.gargoylesoftware.htmlunit.javascript.host.geo.Position;
-
-public class htmlunit_Driver {
+public class b5_htmlunit_Driver {
 
 	
 	
@@ -36,12 +27,13 @@ public class htmlunit_Driver {
 		
 		
 		
-		DesiredCapabilities capability = DesiredCapabilities.htmlUnitWithJs();
-		WebDriver driver= new HtmlUnitDriver(capability);
+		DesiredCapabilities capability = DesiredCapabilities.htmlUnit();
+		//WebDriver driver= new HtmlUnitDriver(capability);
+
+		//FirefoxOptions opt=new FirefoxOptions();
+
 		
-		
-		
-		//WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new FirefoxDriver();
 		
 		
 		

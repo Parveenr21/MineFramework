@@ -14,6 +14,21 @@ public class a1_W3_element_nullify_onceDOMchanges {
 	@BeforeMethod
 	public void setup()
 	{
+
+
+		/*
+
+		cap = DesiredCapabilities.firefox();
+		//cap.setCapability("marionette", false);	//DEFAULT is true and marionette needs it true.
+		System.setProperty("webdriver.gecko.driver","/Users/parawat/Downloads/geckodriver");
+		cap.setCapability("firefox_binary", "/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox-bin");
+
+		//The below statement is required when we use marionette TRUE..else legacy one will worl
+		//DEFAULT capability is TRUE for marionette.
+
+
+
+		 */
 DesiredCapabilities cap= DesiredCapabilities.firefox();
 		
 		cap.setCapability("marionette", true);	//RUN by keeping it true only

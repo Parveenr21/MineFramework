@@ -1,0 +1,10 @@
+ACTION classes
+
+These are advanced APIS for handling keyboard and mouse events..
+
+IMPLEMENTATION of action classes are bundled in webdriver jar. These work on selenium generic implementation
+using KEYBOARD and MOUSE INPUT classes. which work
+on OS level calls to interact to system to an extent.
+
+
+

@@ -3,6 +3,7 @@ package p1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -30,10 +31,13 @@ public void setExcel() throws Exception
 	public void test() throws Exception
 	{
 		FirefoxProfile profile = new FirefoxProfile();
-		
-		driver=new FirefoxDriver(profile);
-		
-		
+
+		FirefoxOptions opt = new FirefoxOptions();
+		opt.setProfile(profile);
+		WebDriver driver = new FirefoxDriver(opt);
+
+
+
 		//Row number should be plus one as first is header
 		int rownumber=2;
 		int columnnumber=5;

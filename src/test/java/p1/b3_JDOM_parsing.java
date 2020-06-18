@@ -1,17 +1,13 @@
 package p1;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-
-import org.apache.bcel.classfile.Utility;
-import org.apache.commons.io.IOUtils;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 
-import com.sun.jna.LastErrorException;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 public class b3_JDOM_parsing {
 

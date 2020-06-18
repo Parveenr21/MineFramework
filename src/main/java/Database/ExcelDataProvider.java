@@ -1,13 +1,11 @@
 package Database;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-
-import org.apache.bcel.classfile.Constant;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.FileInputStream;
 
 public class ExcelDataProvider {
 
@@ -25,6 +23,16 @@ public class ExcelDataProvider {
 
 		try {
 
+
+			/*
+			 * XLS sheet
+			 *
+			 * HSSFWorkbook workbook = new HSSFWorkbook(file);
+
+				HSSFSheet sheet = workbook.getSheetAt(0);
+			 *
+			 */
+
 			// Open the Excel file
 
 			FileInputStream ExcelFile = new FileInputStream(Path);
@@ -32,6 +40,7 @@ public class ExcelDataProvider {
 			// Access the required test data sheet
 
 			ExcelWBook = new XSSFWorkbook(ExcelFile);
+
 
 			ExcelWSheet = ExcelWBook.getSheet(SheetName);
 
@@ -52,17 +61,17 @@ public class ExcelDataProvider {
 			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
 
 
-			
+
 			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
 
 			String CellData = Cell.getStringCellValue();
 			//String CellData1=new Double(Cell.getNumericCellValue()).toString();
-			
+
 			//String CellData=CellData1.substring(0, CellData1.length()-2);
-			
+
 			return CellData;
-			
-			
+
+
 
 		}catch (Exception e){
 
@@ -72,8 +81,8 @@ public class ExcelDataProvider {
 
 	}
 
-	
 
-	
+
+
 
 }

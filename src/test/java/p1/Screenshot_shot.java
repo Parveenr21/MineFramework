@@ -1,20 +1,15 @@
 package p1;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.Test;
 
  
 
@@ -27,12 +22,12 @@ public class Screenshot_shot {
 	@Test
 	public void test() throws InterruptedException, IOException
 	{
-		
-		FirefoxProfile profile = new FirefoxProfile();
-		
-		
-		driver=new FirefoxDriver(profile);
-		
+
+		/*FirefoxOptions opt = new FirefoxOptions();
+		opt.setProfile(profile);
+		WebDriver driver = new FirefoxDriver(opt);*/
+
+		WebDriver driver=new FirefoxDriver();
 		
 		//driver.get("http://blog.codinghorror.com/double-click-must-die/");
 			

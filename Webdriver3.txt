@@ -1,0 +1,38 @@
+
+WEBDRIVER 3
+
+##########################################################################################
+Firstly to use GECKO driver by Marionette needs us to use webdriver 3.3 or more.
+
+GECKO driver needs selenium 47 and above.
+
+GECKO driver is firefox driver which now supports much rich apis to operate on firefox as compare to native firefox driver.
+
+Please download latest GECKO driver ..unlike firefox driver.. GECKO driver does not come bundled in seleniumStandalone.jar
+
+so dowload it from external site.
+
+
+With Selenium 3.0 and later, you shouldn't need to do anything to use Marionette, as it's enabled by default.
+but If we want to use FIRFOX driver we can turn off MARIONETTE capability
+
+cap = DesiredCapabilities.firefox();
+cap.setCapability("marionette", false);	// but here we also need old firefox version as new one does not support firefox driver.
+
+
+
+in case we are using old firefox but latest webdriver which uses geckodriver.. then it will give
+org.openqa.selenium.SessionNotCreatedException
+
+##########################################################################################
+
+//GENERAL question.. driver= new firefoxdriver(cap); // This opens the plain browser with nothing in address bar
+
+//close vs quit..  closes close current browser pane and does not nullify the driver instance.. while quit closes all instances and nullify driver.
+//quit calls dispose.. driver.dispose was there earlieer now ..no more..
+
+org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+
+
+
+

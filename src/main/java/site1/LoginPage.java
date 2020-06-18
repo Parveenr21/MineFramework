@@ -19,7 +19,6 @@ import org.openqa.selenium.support.PageFactory;
 import ActionUtil.Util;
 
 
-
 public class LoginPage  {
 
   //public static final String PAGE_URL = System.getProperty("BaseURL")+"/login.htm";
@@ -105,7 +104,10 @@ class
   public WebElement linkJavaScript;  
   
   
-  
+
+  @FindBy(xpath = "//*[@id='main']/div[1]/div[1]/a[1]")
+  public WebElement learnHtml;
+
     /*
      * 
      * less Verbose way to declare this  
@@ -204,4 +206,21 @@ class
     	  
     	  
       }
+
+
+      public void foo()
+      {
+        //java.lang.NullPointerException  will come if we initialize this class like below
+
+          /*LoginPage LP= new LoginPage(driverInstance);
+          This way does notinitialize the webelements.. To initiazlise the webelements we need to use PageFactory.init elements
+         LoginPage LP=	PageFactory.initElements(driverInstance, LoginPage.class);
+         */
+
+
+
+          learnHtml.isSelected();
+      }
+
+
 }

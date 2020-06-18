@@ -1,0 +1,9 @@
+ISSUES webdriver3
+
+
+1. no action classes implementation:-- it is resolved now
+2. Page operation.. click etc..-- do not wait for PAGE load.. we have to use thread.sleep 
+
+
+3.3.1 with firefox 52..fine but one issue
+3. SEND Keys not working in lates firefox with gecko 0.15

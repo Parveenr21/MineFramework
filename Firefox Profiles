@@ -1,0 +1,35 @@
+Firefox Profiles
+
+There are 2 ways of handling profiles in firefox
+
+1. GET and READ already created and set profile .. we can also customize settings by code.
+
+2. We can create object of default RUNNING profile when webdriver runs test in one TEST default profile and customize this
+profile settings..
+
+
+
+so both ways.. we are not creating profile but one is customizing an already  created profile if needed and another is
+customizing TEST execution default profile.
+
+
+
+1. If we have created a profile already
+
+ 	ProfilesIni profile = new ProfilesIni(); 		//Profile initilizer
+	FirefoxProfile myprofile =profile.getProfile("webdriverProfile"); //Getting profile by profile name using profile initilizer
+	myprofile.setAcceptUntrustedCertificates(true); //Setting a preference
+	driver=new FirefoxDriver(myprofile);
+	
+	
+	
+	2. Using TEST default profile.. creating object of that
+	
+	
+		FirefoxProfile myprofile = new FirefoxProfile();	//not reading any profile..
+		 myprofile.setAcceptUntrustedCertificates(true);//Setting a preference
+		 driver=new FirefoxDriver(myprofile);
+	
+	
+	
+	

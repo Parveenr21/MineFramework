@@ -1,23 +1,6 @@
 package p1;
 
 
-import java.util.Iterator;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.Test;
-
-import com.gargoylesoftware.htmlunit.BrowserVersion;
-import com.gargoylesoftware.htmlunit.Page;
-import com.gargoylesoftware.htmlunit.javascript.host.geo.Position;
-
 public class b4_PhantomJS {
 
 	

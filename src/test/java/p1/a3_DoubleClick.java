@@ -4,8 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.*;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -20,9 +22,12 @@ public class a3_DoubleClick {
 	{
 		
 		FirefoxProfile profile = new FirefoxProfile();
+		DesiredCapabilities cap =new DesiredCapabilities();
+		cap.setCapability(FirefoxDriver.PROFILE,profile);
+
+
 		
-		
-		driver=new FirefoxDriver(profile);
+		driver=new FirefoxDriver(cap);
 		
 		
 		//driver.get("http://blog.codinghorror.com/double-click-must-die/");
