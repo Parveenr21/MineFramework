@@ -161,7 +161,7 @@
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.13</version>
+			<version>4.1.1</version>
 		</dependency>
 
 		<!-- We need to include the poi-ooxml jars to get the XSSF library. The 
